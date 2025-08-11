@@ -1,0 +1,27 @@
+server:
+  port: 8091
+
+app:
+  kafka:
+    topic: ipc-topic
+    schema.registry.url: http://host.docker.internal:8081
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  mvc:
+    servlet:
+      path: /auth    # Path added in ecs-gateway under predicates
+  kafka:
+    bootstrap-servers: host.docker.internal:9092
+    consumer:
+      group-id: ecs-auth-group
+
+logging:
+  level:
+    org.apache.kafka: INFO
