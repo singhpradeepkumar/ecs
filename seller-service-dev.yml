@@ -23,7 +23,7 @@ spring:
       group-id: ecs-seller
 
 //*********** START: DO NOT CHANGE***********	  
-cipher
+cipher:
   key: TmFtZWVzaFkwVXJlTXlMIWZl
   iv: ESi6qJZS6/Q0IaDmLCFc1w==
 //*********** END: DO NOT CHANGE ***********	  
@@ -37,7 +37,7 @@ rdbms:
   url: jdbc:postgresql://ecs_db/echikitsak
   default-schema: ecs_phamacy
 
-hibernate
+hibernate:
   dialect: org.hibernate.dialect.PostgreSQLDialect
   format_sql: true
 
