@@ -28,10 +28,9 @@ cipher:
   iv: ESi6qJZS6/Q0IaDmLCFc1w==
 //*********** END: DO NOT CHANGE ***********	  
 
-jdbc:
-  rdbms:
-    driver: org.postgresql.Driver
+
 rdbms:
+  driver: org.postgresql.Driver
   user: ecsadmin
   pwd: M8XkzirhG6qVSFHscuINqg==
   url: jdbc:postgresql://ecs_db/echikitsak
