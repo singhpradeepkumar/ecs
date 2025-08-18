@@ -1,11 +1,6 @@
 server:
   port: 8093
 
-spring:
-  kafka:
-    admin:
-      fail-fast: true
-
 app:
   kafka:
     schema.registry.url: http://host.docker.internal:8081
@@ -26,6 +21,8 @@ spring:
     servlet:
       path: /seller    # Path added in ecs-gateway under predicates
   kafka:
+    admin:
+      fail-fast: true
     bootstrap-servers: host.docker.internal:9092
     consumer:
       group-id: ecs-seller
