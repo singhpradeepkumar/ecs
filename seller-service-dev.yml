@@ -1,10 +1,18 @@
 server:
   port: 8093
 
+spring:
+  kafka:
+    admin:
+      fail-fast: true
+
 app:
   kafka:
-    topic: ipc-topic
     schema.registry.url: http://host.docker.internal:8081
+    topics:
+      - seller.seller-service.event.seller.created.dev.v1
+      - seller.seller-service.event.seller.updated.dev.v1
+      - seller.seller-service.event.seller.deleted.dev.v1
 
 eureka:
   client:
