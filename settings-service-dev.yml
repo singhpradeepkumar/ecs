@@ -4,8 +4,8 @@ server:
 //Topic naming convention: <team>.<service>.<event-type>.<entity>.<action>.<environment>.<version>
 app:
   kafka:
+    schema.registry.url: http://host.docker.internal:8081
     producers:
-      schema.registry.url: http://host.docker.internal:8081
       topics:
         - settings.settings-service.event.customization.created.dev.v1
     consumers:
