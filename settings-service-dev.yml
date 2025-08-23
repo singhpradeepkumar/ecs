@@ -40,8 +40,8 @@ rdbms:
   driver: org.postgresql.Driver
   user: ecsadmin
   pwd: M8XkzirhG6qVSFHscuINqg==
-  url: jdbc:postgresql://ecs_db:3524/echikitsak
-  default-schema: ecs_phamacy
+  url: jdbc:postgresql://ecs_db:3524/ecs_settings
+  default-schema: ecs
 
 hibernate:
   dialect: org.hibernate.dialect.PostgreSQLDialect
