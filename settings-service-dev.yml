@@ -10,7 +10,7 @@ app:
         - settings.settings-service.event.customization.created.dev.v1
     consumers:
       topics:
-        - seller.seller-service.event.seller.created.dev.v1
+        - pharmacy.pharmacy-service.event.pharmacy.created.dev.v1
 
 eureka:
   client:
