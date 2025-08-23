@@ -7,9 +7,9 @@ app:
     schema.registry.url: http://host.docker.internal:8081
     producers:
       topics:
-        - seller.seller-service.event.seller.created.dev.v1
-        - seller.seller-service.event.seller.updated.dev.v1
-        - seller.seller-service.event.seller.deleted.dev.v1
+        - pharmacy.pharmacy-service.event.pharmacy.created.dev.v1
+        - pharmacy.pharmacy-service.event.pharmacy.updated.dev.v1
+        - pharmacy.pharmacy-service.event.pharmacy.deleted.dev.v1
 
 eureka:
   client:
@@ -21,13 +21,13 @@ eureka:
 spring:
   mvc:
     servlet:
-      path: /seller    # Path added in ecs-gateway under predicates
+      path: /pharmacy    # Path added in ecs-gateway under predicates
   kafka:
     admin:
       fail-fast: true
     bootstrap-servers: host.docker.internal:9092
     consumer:
-      group-id: ecs-seller
+      group-id: ecs-pharmacy
 
 //*********** START: DO NOT CHANGE***********	  
 cipher:
