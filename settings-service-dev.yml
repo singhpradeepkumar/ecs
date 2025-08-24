@@ -50,3 +50,15 @@ hibernate:
 logging:
   level:
     org.apache.kafka: INFO
+
+customization:
+  values:
+    PRODUCT_EXPIRY_ALERT_DAYS:
+      value: 180
+      desc: Product auto expiry alert before products expires (in number of days).
+    TERMS_AND_CONDITIONS:
+      value: >-
+        Warranty: Subject to {{city}} Jurisdiction
+        दावा वापसी के लिए रसीद लाना अनिवार्य है |
+        बिक्री तिथि के 15 दिन के बाद व कटी हुई दवाइया वापस नहीं होगी |
+      desc: Terms and Conditions which will be used while selling product.
