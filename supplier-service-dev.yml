@@ -1,5 +1,5 @@
 server:
-  port: 8093
+  port: 8095
 
 //Topic naming convention: <team>.<service>.<event-type>.<entity>.<action>.<environment>.<version>
 app:
