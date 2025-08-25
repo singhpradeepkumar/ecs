@@ -1,0 +1,51 @@
+server:
+  port: 8093
+
+//Topic naming convention: <team>.<service>.<event-type>.<entity>.<action>.<environment>.<version>
+app:
+  kafka:
+    schema.registry.url: http://host.docker.internal:8081
+    producers:
+      topics:
+        - supplier.supplier-service.event.supplier.created.dev.v1
+        - supplier.supplier-service.event.supplier.updated.dev.v1
+        - supplier.supplier-service.event.supplier.deleted.dev.v1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  mvc:
+    servlet:
+      path: /supplier    # Path added in ecs-gateway under predicates
+  kafka:
+    admin:
+      fail-fast: true
+    bootstrap-servers: host.docker.internal:9092
+    consumer:
+      group-id: ecs-supplier
+
+//*********** START: DO NOT CHANGE***********	  
+cipher:
+  key: TmFtZWVzaFkwVXJlTXlMIWZl
+  iv: ESi6qJZS6/Q0IaDmLCFc1w==
+//*********** END: DO NOT CHANGE ***********	  
+
+rdbms:
+  driver: org.postgresql.Driver
+  user: ecsadmin
+  pwd: M8XkzirhG6qVSFHscuINqg==
+  url: jdbc:postgresql://ecs_db:3524/ecs_supplier
+  default-schema: ecs
+
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQLDialect
+  format_sql: true
+
+logging:
+  level:
+    org.apache.kafka: INFO
