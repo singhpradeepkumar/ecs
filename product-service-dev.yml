@@ -41,7 +41,7 @@ rdbms:
   driver: org.postgresql.Driver
   user: ecsadmin
   pwd: M8XkzirhG6qVSFHscuINqg==
-  url: jdbc:postgresql://ecs_db:3524/ecs_supplier
+  url: jdbc:postgresql://ecs_db:3524/ecs_product
   default-schema: ecs
 
 hibernate:
