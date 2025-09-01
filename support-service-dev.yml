@@ -27,6 +27,11 @@ spring:
     bootstrap-servers: host.docker.internal:9092
     consumer:
       group-id: ecs-support
+  data:
+    mongodb:
+      uri: mongodb://ecsadmin:iT$2$ecreTF0ry0u@ecs_nosql_db/ecs
+      database: ecs
+      authentication-database: ecs
 
 //*********** START: DO NOT CHANGE***********	  
 cipher:
