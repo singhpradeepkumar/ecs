@@ -2,7 +2,7 @@ server:
   port: 8097
   ssl:
     key-store: classpath:certs/mongodb.jks
-    key-store-password: yourKeystorePassword
+    key-store-password: changeit
     key-store-type: JKS
 
 
