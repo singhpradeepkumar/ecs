@@ -29,7 +29,7 @@ spring:
       group-id: ecs-support
   data:
     mongodb:
-      uri: "mongodb://ecsadmin:iT$2$ecreTF0ry0u@ecs-nosql-db:27017/ecs?tls=true&tlsCAFile=/etc/ca.pem&tlsCertificateKeyFile=/etc/mongodb.pem"
+      uri: "mongodb://ecsadmin:iT$2$ecreTF0ry0u@ecs-nosql-db:12921/ecs?ssl=true"
 
 javax:
   net:
