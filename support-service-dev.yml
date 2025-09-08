@@ -1,10 +1,5 @@
 server:
   port: 8097
-  ssl:
-    key-store: classpath:certs/mongodb.jks
-    key-store-password: changeit
-    key-store-type: JKS
-
 
 //Topic naming convention: <team>.<service>.<event-type>.<entity>.<action>.<environment>.<version>
 app:
@@ -23,6 +18,10 @@ eureka:
     prefer-ip-address: true
 
 spring:
+  ssl:
+    trust-store: "classpath:certs/mongodb-truststore.jks"
+    trust-store-password: changeit
+    trust-store-type: JKS
   mvc:
     servlet:
       path: /support    # Path added in ecs-gateway under predicates
