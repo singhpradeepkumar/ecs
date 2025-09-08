@@ -40,10 +40,10 @@ spring:
   ssl:
     bundles:
       mongodb-ssl:
-        key:
-          path: /etc/mongodb.pem
-        trust:
-          path: /etc/ca.pem
+        truststore:
+          path: /tmp/truststore.jks
+          password: changeit
+          type: JKS
 
 //*********** START: DO NOT CHANGE***********	  
 cipher:
