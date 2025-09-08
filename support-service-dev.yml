@@ -34,16 +34,14 @@ spring:
       password: iT$2$ecreTF0ry0u
       ssl:
         enabled: true
-        bundle: mongodb-ssl
       database: ecs
       authentication-database: ecs
-  ssl:
-    bundles:
-      mongodb-ssl:
-        truststore:
-          path: /tmp/truststore.jks
-          password: changeit
-          type: JKS
+
+javax:
+  net:
+    ssl:
+      trustStore: "classpath:/truststore.jks"
+      trustStorePassword: changeit
 
 //*********** START: DO NOT CHANGE***********	  
 cipher:
