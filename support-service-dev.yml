@@ -29,9 +29,21 @@ spring:
       group-id: ecs-support
   data:
     mongodb:
-      uri: mongodb://ecs-nosql-db:12921/?ssl=true
+      uri: mongodb://ecs-nosql-db:12921
+      username: ecsadmin
+      password: iT$2$ecreTF0ry0u
+      ssl:
+        enabled: true
+        bundle: mongodb-ssl
       database: ecs
       authentication-database: ecs
+  ssl:
+    bundles:
+      mongodb-ssl:
+        key:
+          path: /etc/mongodb.pem
+        trust:
+          path: /etc/ca.pem
 
 //*********** START: DO NOT CHANGE***********	  
 cipher:
