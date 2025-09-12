@@ -1,0 +1,52 @@
+server:
+  port: 8098
+
+//Topic naming convention: <team>.<service>.<event-type>.<entity>.<action>.<environment>.<version>
+app:
+  version: 1.0.0
+  kafka:
+    schema.registry.url: http://host.docker.internal:8081
+    consumers:
+      topics:
+        - product.product-service.event.product.created.dev.v1
+        - product.product-service.event.product.updated.dev.v1
+        - product.product-service.event.product.deleted.dev.v1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  mvc:
+    servlet:
+      path: /notify    # Path added in ecs-gateway under predicates
+  kafka:
+    admin:
+      fail-fast: true
+    bootstrap-servers: host.docker.internal:9092
+    consumer:
+      group-id: ecs-notify
+  data:
+    mongodb:
+      uri: "mongodb://ecsadmin:iT$2$ecreTF0ry0u@ecs-nosql-db:12921/ecs?ssl=true"
+
+//*********** START: DO NOT CHANGE***********	  
+cipher:
+  key: TmFtZWVzaFkwVXJlTXlMIWZl
+  iv: ESi6qJZS6/Q0IaDmLCFc1w==
+//*********** END: DO NOT CHANGE ***********	  
+
+email:
+  host: smtp.gmail.com
+  port: 587
+  auth: true
+  starttls: true
+  from: inventory@gmail.com
+  password: 
+
+logging:
+  level:
+    org.apache.kafka: INFO
