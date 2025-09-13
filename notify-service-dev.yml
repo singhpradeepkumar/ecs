@@ -44,7 +44,7 @@ email:
   port: 587
   auth: true
   starttls: true
-  from: echikitsaksystem@gmail.com
+  sender: echikitsaksystem@gmail.com
   password: s+dfRpT4U8tkPAJBe17MSw==
 
 logging:
