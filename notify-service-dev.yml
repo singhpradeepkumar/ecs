@@ -11,6 +11,7 @@ app:
         - product.product-service.event.product.created.dev.v1
         - product.product-service.event.product.updated.dev.v1
         - product.product-service.event.product.deleted.dev.v1
+        - support.support-service.event.feedback.created.dev.v1
 
 eureka:
   client:
