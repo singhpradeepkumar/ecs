@@ -44,6 +44,8 @@ email:
   port: 587
   auth: true
   starttls: true
+  protocols: TLSv1.2
+  ssl-trust: smtp.gmail.com
   sender: echikitsaksystem@gmail.com
   password: s+dfRpT4U8tkPAJBe17MSw==
 
