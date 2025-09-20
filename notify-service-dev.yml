@@ -47,8 +47,8 @@ email:
   starttls: true
   protocols: TLSv1.2
   ssl-trust: smtp.gmail.com
-  sender: echikitsaksystem@gmail.com
-  password: s+dfRpT4U8tkPAJBe17MSw==
+  sender: echikitsak.notify@gmail.com
+  password: I9GfgGG4tcITllSPnqFoKKUIhiekt0ly2p0GT0ZGuLc=
 
 logging:
   level:
