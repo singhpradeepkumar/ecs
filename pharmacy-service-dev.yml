@@ -10,6 +10,10 @@ app:
         - pharmacy.pharmacy-service.event.pharmacy.created.dev.v1
         - pharmacy.pharmacy-service.event.pharmacy.updated.dev.v1
         - pharmacy.pharmacy-service.event.pharmacy.deleted.dev.v1
+        - support.notify-service.command.pharmacy.response.dev.v1
+    consumers:
+      topics:
+        - support.notify-service.command.pharmacy.request.dev.v1
 
 eureka:
   client:
