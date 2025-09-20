@@ -12,6 +12,10 @@ app:
         - product.product-service.event.product.updated.dev.v1
         - product.product-service.event.product.deleted.dev.v1
         - support.support-service.event.feedback.created.dev.v1
+        - support.notify-service.command.pharmacy.response.dev.v1
+    producers:
+      topics:
+        - support.notify-service.command.pharmacy.request.dev.v1
 
 eureka:
   client:
