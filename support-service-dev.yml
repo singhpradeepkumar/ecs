@@ -18,10 +18,6 @@ eureka:
     prefer-ip-address: true
 
 spring:
-  ssl:
-    trust-store: "classpath:certs/mongodb-truststore.jks"
-    trust-store-password: changeit
-    trust-store-type: JKS
   mvc:
     servlet:
       path: /support    # Path added in ecs-gateway under predicates
